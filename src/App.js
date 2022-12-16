@@ -25,6 +25,10 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHanlder = (expense) => {
+    console.log(expense);
+  };
   // JSX under the hood 
   // return React.createElement(
   //   "div",
@@ -34,7 +38,7 @@ const App = () => {
   return (
 
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHanlder} />
       <Expenses items={expenses}/>
     </div>
   );

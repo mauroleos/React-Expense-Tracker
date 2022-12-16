@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
@@ -19,20 +19,35 @@ const ExpenseForm = () => {
         setEnteredDate(event.target.value);
     };
 
+    const submitHanlder = (event) => {
+        event.preventDefault();
+
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        };
+        
+        props.onSaveExpenseData(expenseData);
+        setEnteredTitle('');
+        setEnteredAmount('');
+        setEnteredDate('');
+    };
+
   return (
-    <form>
+    <form onSubmit={submitHanlder}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
-                <label>{enteredTitle}</label>
-                <input type="text" onChange={titleChangeHandler} />
+                <label>Title</label>
+                <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
             </div>
             <div className="new-expense__control">
-                <label>{enteredAmount}</label>
-                <input type="number" min="0.01" step="0.01" onChange={amountChangeHanlder} />
+                <label>Amount</label>
+                <input type="number" min="0.01" step="0.01" value={enteredAmount} onChange={amountChangeHanlder} />
             </div>
             <div className="new-expense__control">
-                <label>{enteredDate}</label>
-                <input type="date" min="2019-01-01" max="2023-12-31" onChange={dateChangeHandler}/>
+                <label>Date</label>
+                <input type="date" min="2019-01-01" max="2023-12-31" value={enteredDate} onChange={dateChangeHandler}/>
             </div>
         </div>
         <div className="new-expense__actions">
