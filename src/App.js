@@ -29,19 +29,18 @@ const App = () => {
   const addExpenseHanlder = (expense) => {
     console.log(expense);
   };
-  // JSX under the hood 
+  // JSX under the hood
   // return React.createElement(
   //   "div",
   //   {},
   //   React.createElement(Expenses, { items: expenses })
   // );
   return (
-
     <div>
       <NewExpense onAddExpense={addExpenseHanlder} />
-      <Expenses items={expenses}/>
+      <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
