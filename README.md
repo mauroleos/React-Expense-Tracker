@@ -3,7 +3,7 @@
 Welcome to the React-Expense-Tracker, an innovative financial management tool crafted using React, CSS, and JSX. It's now available on Heroku for seamless access.
 
 <strong>Experience the application live <a href="https://react-expense-tracker-bc6693da7bef.herokuapp.com/"><b>here</b></a>.</strong>
-<img src="whatsapp-clone.png" alt="image">
+<img src="expense-tracker.png" alt="image">
 
 # About Me
 Hello, I'm Mauro Leos, a dedicated Software Engineer who's passionate about creating practical solutions. The React-Expense-Tracker is a testament to my commitment to crafting user-friendly applications that make financial tracking a breeze.
