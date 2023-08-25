@@ -1,6 +1,6 @@
 # React-Expense-Tracker
 
-Welcome to the React-Expense-Tracker, an innovative financial management tool crafted using React, CSS, and JSX. It's now available on Heroku for seamless access.
+Welcome to the React-Expense-Tracker, an innovative financial management tool crafted using React, CSS, and JavaScript. It's now available on Heroku for seamless access.
 
 <strong>Experience the application live <a href="https://react-expense-tracker-bc6693da7bef.herokuapp.com/"><b>here</b></a>.</strong>
 
